@@ -1,6 +1,14 @@
 import React from "react";
 
 function Search() {
+  state = {
+    searchID: ""
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+  };
+
   return (
     <div class="row">
       <div class="col-md-6 offset-md-3">
