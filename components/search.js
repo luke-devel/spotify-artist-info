@@ -1,13 +1,13 @@
 import React from "react";
 
 function Search() {
-  state = {
-    searchID: ""
-  };
+  //   state = {
+  //     searchID: ""
+  //   };
 
-  handleFormSubmit = event => {
-    event.preventDefault();
-  };
+  //   handleFormSubmit = event => {
+  //     event.preventDefault();
+  //   };
 
   return (
     <div class="row">

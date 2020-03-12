@@ -212,25 +212,31 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 function Search() {
+  //   state = {
+  //     searchID: ""
+  //   };
+  //   handleFormSubmit = event => {
+  //     event.preventDefault();
+  //   };
   return __jsx("div", {
     class: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 13
     },
     __self: this
   }, __jsx("div", {
     class: "col-md-6 offset-md-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 14
     },
     __self: this
   }, __jsx("div", {
     class: "input-group",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 15
     },
     __self: this
   }, __jsx("input", {
@@ -241,7 +247,7 @@ function Search() {
     placeholder: "Enter Spotify Artist ID",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 16
     },
     __self: this
   }), __jsx("span", {
@@ -251,7 +257,7 @@ function Search() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 23
     },
     __self: this
   }, __jsx("button", {
@@ -260,7 +266,7 @@ function Search() {
     onClick: event => window.location.href = `/artist-id/${this.idSearch}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 24
     },
     __self: this
   }, "Search!")))));
