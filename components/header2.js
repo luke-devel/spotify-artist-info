@@ -10,7 +10,23 @@ function Header2() {
           color: "black"
         }}
       >
-        <h2 style={{ fontSize: "25px" }}>Enter a Spotify Artist ID:</h2>
+        <h2 style={{ fontSize: "25px" }}>
+          Enter a Spotify Artist URL or ID to Begin
+        </h2>
+
+        <h2 style={{ fontSize: "20px", textDecoration: "underline" }}>
+          Acceptable Formats
+        </h2>
+
+        <p style={{ fontSize: "20px" }}>
+          https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2?si=Ie1FaVNxSdSwK-qzGo_9wA
+        </p>
+
+        <p style={{ fontSize: "20px" }}>
+          open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2?si=Ie1FaVNxSdSwK-qzGo_9wA
+        </p>
+
+        <p style={{ fontSize: "20px" }}>3WrFJ7ztbogyGnTHbHJFl2</p>
       </div>
     </div>
   );

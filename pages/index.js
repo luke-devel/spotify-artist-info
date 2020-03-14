@@ -4,14 +4,14 @@ import Search from "../components/search";
 import Header2 from "../components/header2";
 export default function Index() {
   let styles = {
-    backgroundColor: "#595959"
+    backgroundColor: "white"
   };
 
   return (
     <>
       <div style={styles}>
-        <div class="container">
-          <Header />
+        <div className="container">
+          <Header header={{ title: "Spotify Artist Info Tool" }} />
           <br></br>
           <Header2 />
           <br></br>

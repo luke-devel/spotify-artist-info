@@ -108,27 +108,30 @@ var _jsxFileName = "C:\\Users\\luke\\Development\\nextjs1\\components\\header.js
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-function Header() {
+function Header({
+  header
+}) {
   let stylesCourseHeading = {
     textAlign: "center",
     textTransform: "uppercase",
     color: "#000000",
     border: "5px solid #000000",
     marginTop: "10px",
-    padding: "10px"
+    padding: "10px",
+    fontSize: "30px"
   };
   return __jsx("div", {
     class: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 14
     },
     __self: this
   }, __jsx("div", {
     class: "col-md-6 offset-md-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 15
     },
     __self: this
   }, __jsx("h3", {
@@ -136,10 +139,10 @@ function Header() {
     style: stylesCourseHeading,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 16
     },
     __self: this
-  }, "Spotify Artist Listener Info")));
+  }, header.title)));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -189,7 +192,44 @@ function Header2() {
       lineNumber: 13
     },
     __self: this
-  }, "Enter a Spotify Artist ID:")));
+  }, "Enter a Spotify Artist URL or ID to Begin"), __jsx("h2", {
+    style: {
+      fontSize: "20px",
+      textDecoration: "underline"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, "Acceptable Formats"), __jsx("p", {
+    style: {
+      fontSize: "20px"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2?si=Ie1FaVNxSdSwK-qzGo_9wA"), __jsx("p", {
+    style: {
+      fontSize: "20px"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, "open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2?si=Ie1FaVNxSdSwK-qzGo_9wA"), __jsx("p", {
+    style: {
+      fontSize: "20px"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }, "3WrFJ7ztbogyGnTHbHJFl2")));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Header2);
@@ -210,66 +250,119 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "C:\\Users\\luke\\Development\\nextjs1\\components\\search.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function Search() {
-  //   state = {
-  //     searchID: ""
-  //   };
-  //   handleFormSubmit = event => {
-  //     event.preventDefault();
-  //   };
-  return __jsx("div", {
-    class: "row",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }, __jsx("div", {
-    class: "col-md-6 offset-md-3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }, __jsx("div", {
-    class: "input-group",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }, __jsx("input", {
-    type: "text",
-    name: "idSearch",
-    id: "search_top",
-    class: "form-control",
-    placeholder: "Enter Spotify Artist ID",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }), __jsx("span", {
-    class: "input-group-btn",
-    style: {
-      marginLeft: "10px"
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }, __jsx("button", {
-    type: "submit",
-    class: "btn btn-warning",
-    onClick: event => window.location.href = `/artist-id/${this.idSearch}`,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }, "Search!")))));
+
+
+class Search extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+
+    _defineProperty(this, "handleSubmit", event => {
+      event.preventDefault();
+    });
+
+    _defineProperty(this, "handleInputChange", event => {
+      event.preventDefault();
+      this.setState({
+        idSearch: event.target.value
+      });
+    });
+
+    _defineProperty(this, "grabID", artistLink => {
+      if (artistLink[0] === "h" && artistLink.length === 80) {
+        return artistLink.slice(32, -26);
+      }
+
+      if (artistLink[0] === "o" && artistLink.length === 72) {
+        return artistLink.slice(24, -26);
+      }
+
+      if (artistLink.length === 22) {
+        return artistLink;
+      } //  https://open.spotify.com/artist/5Z3IWpvwOvoaWodujHw7xh?si=VzZo4ckGSQi0Mj1Oa1EBJw
+
+    });
+
+    this.state = {
+      idSearch: null
+    };
+  }
+
+  render() {
+    const {
+      idSearch
+    } = this.state;
+    return __jsx("div", {
+      class: "row",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 40
+      },
+      __self: this
+    }, __jsx("div", {
+      class: "col-md-6 offset-md-3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }, __jsx("h2", {
+      style: {
+        fontSize: "23px"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    }, "Search Input: ", idSearch), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43
+      },
+      __self: this
+    }), __jsx("div", {
+      class: "input-group",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44
+      },
+      __self: this
+    }, __jsx("input", {
+      type: "text",
+      name: "idSearch",
+      id: "search_top",
+      class: "form-control",
+      placeholder: "Enter Spotify Artist ID",
+      onChange: this.handleInputChange,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45
+      },
+      __self: this
+    }), __jsx("span", {
+      class: "input-group-btn",
+      style: {
+        marginLeft: "10px"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53
+      },
+      __self: this
+    }, __jsx("button", {
+      type: "submit",
+      class: "btn btn-warning",
+      onClick: event => window.location.href = `/artist/${this.grabID(idSearch)}`,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: this
+    }, "Search!")))));
+  }
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Search);
@@ -2744,7 +2837,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function Index() {
   let styles = {
-    backgroundColor: "#595959"
+    backgroundColor: "white"
   };
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
     style: styles,
@@ -2754,13 +2847,16 @@ function Index() {
     },
     __self: this
   }, __jsx("div", {
-    class: "container",
+    className: "container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: this
   }, __jsx(_components_header__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    header: {
+      title: "Spotify Artist Info Tool"
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
