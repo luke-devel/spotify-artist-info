@@ -22,7 +22,6 @@ function Artist(props) {
   return (
     <>
       <div style={styles}>
-        <br></br>
         <Header header={{ title: props.data.name }} />
         <div style={{ textAlign: "center" }}>
           <img

@@ -6278,19 +6278,13 @@ function Artist(props) {
       lineNumber: 24
     },
     __self: this
-  }, __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }), __jsx(_components_header__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, __jsx(_components_header__WEBPACK_IMPORTED_MODULE_5__["default"], {
     header: {
       title: props.data.name
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 25
     },
     __self: this
   }), __jsx("div", {
@@ -6299,7 +6293,7 @@ function Artist(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 26
     },
     __self: this
   }, __jsx("img", {
@@ -6311,14 +6305,14 @@ function Artist(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 27
     },
     __self: this
   })), __jsx("h1", {
     style: headingStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 33
     },
     __self: this
   }, "Spotify Genres"), __jsx(_components_genres__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -6327,14 +6321,14 @@ function Artist(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 34
     },
     __self: this
   }), __jsx("h1", {
     style: headingStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 35
     },
     __self: this
   }, "Monthly Listener Info "), __jsx(_components_cities__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -6343,47 +6337,47 @@ function Artist(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 36
     },
     __self: this
   }), __jsx("h1", {
     style: headingStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 37
     },
     __self: this
   }, "Popularity Rating: ", props.data.popularity), __jsx("h1", {
     style: headingStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 38
     },
     __self: this
   }, "Global Chart Position: ", props.data.insights.global_chart_position), __jsx("h1", {
     style: headingStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 41
     },
     __self: this
   }, "Monthly Listeners: ", props.data.insights.monthly_listeners), __jsx("h1", {
     style: headingStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 44
     },
     __self: this
   }, "Follower Count: ", props.data.insights.follower_count), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 47
     },
     __self: this
   }), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 48
     },
     __self: this
   })));
@@ -6419,7 +6413,7 @@ Artist.getInitialProps = function _callee(context) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fartist%2F%5Bid%5D&absolutePagePath=C%3A%5CUsers%5Cluke%5CDevelopment%5Cnextjs1%5Cpages%5Cartist%5C%5Bid%5D.js ***!
   \************************************************************************************************************************************************************/
@@ -6442,5 +6436,5 @@ module.exports = dll_aa461a50664441bad342;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[id].js.map
