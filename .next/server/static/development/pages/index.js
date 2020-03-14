@@ -2837,7 +2837,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function Index() {
   let styles = {
-    backgroundColor: "white"
+    backgroundColor: "#cccccc"
   };
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
     style: styles,

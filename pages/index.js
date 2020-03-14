@@ -4,7 +4,7 @@ import Search from "../components/search";
 import Header2 from "../components/header2";
 export default function Index() {
   let styles = {
-    backgroundColor: "white"
+    backgroundColor: "#cccccc"
   };
 
   return (

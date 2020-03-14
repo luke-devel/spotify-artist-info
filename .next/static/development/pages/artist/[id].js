@@ -6267,15 +6267,30 @@ function Artist(props) {
     textDecoration: "underline",
     marginTop: "10px",
     fontSize: "25px"
-  }; //   console.log(props.data.insights.cities);
-
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(_components_header__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  };
+  var styles = {
+    backgroundColor: "#cccccc"
+  };
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx("div", {
+    style: styles,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }), __jsx(_components_header__WEBPACK_IMPORTED_MODULE_5__["default"], {
     header: {
       title: props.data.name
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 26
     },
     __self: this
   }), __jsx("div", {
@@ -6284,7 +6299,7 @@ function Artist(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 27
     },
     __self: this
   }, __jsx("img", {
@@ -6296,14 +6311,14 @@ function Artist(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 28
     },
     __self: this
   })), __jsx("h1", {
     style: headingStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 34
     },
     __self: this
   }, "Spotify Genres"), __jsx(_components_genres__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -6312,14 +6327,14 @@ function Artist(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 35
     },
     __self: this
   }), __jsx("h1", {
     style: headingStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 36
     },
     __self: this
   }, "Monthly Listener Info "), __jsx(_components_cities__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -6328,38 +6343,50 @@ function Artist(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 37
     },
     __self: this
   }), __jsx("h1", {
     style: headingStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 38
     },
     __self: this
   }, "Popularity Rating: ", props.data.popularity), __jsx("h1", {
     style: headingStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 39
     },
     __self: this
   }, "Global Chart Position: ", props.data.insights.global_chart_position), __jsx("h1", {
     style: headingStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 42
     },
     __self: this
   }, "Monthly Listeners: ", props.data.insights.monthly_listeners), __jsx("h1", {
     style: headingStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 45
     },
     __self: this
-  }, "Follower Count: ", props.data.insights.follower_count));
+  }, "Follower Count: ", props.data.insights.follower_count), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: this
+  }), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
+    },
+    __self: this
+  })));
 }
 
 Artist.getInitialProps = function _callee(context) {
