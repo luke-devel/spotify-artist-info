@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -111,20 +111,19 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 function Cities({
   cities
 }) {
-  let count = 0;
   const citiesList = cities.list.map(function ({
     city,
     country,
     listeners
-  }) {
-    count++;
+  }, i) {
     return __jsx("p", {
+      key: i,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 6
+        lineNumber: 4
       },
       __self: this
-    }, count, ": ", city, ", ", country, " - Monthly Listeners: ", listeners);
+    }, i + 1, ": ", city, ", ", country, " - Monthly Listeners: ", listeners);
   });
   return __jsx("div", {
     style: {
@@ -133,13 +132,82 @@ function Cities({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 11
     },
     __self: this
   }, citiesList);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Cities);
+
+/***/ }),
+
+/***/ "./components/formats.js":
+/*!*******************************!*\
+  !*** ./components/formats.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\luke\\Development\\nextjs1\\components\\formats.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function Formats() {
+  return __jsx("div", {
+    style: {
+      textAlign: "center"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 3
+    },
+    __self: this
+  }, __jsx("h2", {
+    style: {
+      fontSize: "25px",
+      textDecoration: "underline"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: this
+  }, "Acceptable Formats"), __jsx("p", {
+    style: {
+      fontSize: "20px"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2?si=Ie1FaVNxSdSwK-qzGo_9wA"), __jsx("p", {
+    style: {
+      fontSize: "20px"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, "open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2?si=Ie1FaVNxSdSwK-qzGo_9wA"), __jsx("p", {
+    style: {
+      fontSize: "20px"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, "3WrFJ7ztbogyGnTHbHJFl2"));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Formats);
 
 /***/ }),
 
@@ -161,7 +229,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 function Genres({
   genres
 }) {
-  const genreList = genres.list.map(genre => __jsx("li", {
+  const genreList = genres.list.map((genre, i) => __jsx("li", {
+    key: i,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 2
@@ -213,21 +282,21 @@ function Header({
     fontSize: "30px"
   };
   return __jsx("div", {
-    class: "row",
+    className: "row",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     },
     __self: this
   }, __jsx("div", {
-    class: "col-md-6 offset-md-3",
+    className: "col-md-6 offset-md-3",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
     },
     __self: this
   }, __jsx("h3", {
-    class: "course-heading",
+    className: "course-heading",
     style: stylesCourseHeading,
     __source: {
       fileName: _jsxFileName,
@@ -276,7 +345,7 @@ class Search extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
     _defineProperty(this, "grabID", artistLink => {
       if (!artistLink) {
-        return "3WrFJ7ztbogyGnTHbHJFl2";
+        return "undefined";
       }
 
       if (artistLink[0] === "h" && artistLink.length === 80) {
@@ -303,14 +372,14 @@ class Search extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       idSearch
     } = this.state;
     return __jsx("div", {
-      class: "row",
+      className: "row",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 44
       },
       __self: this
     }, __jsx("div", {
-      class: "col-md-6 offset-md-3",
+      className: "col-md-6 offset-md-3",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 45
@@ -332,7 +401,7 @@ class Search extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __self: this
     }), __jsx("div", {
-      class: "input-group",
+      className: "input-group",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 48
@@ -342,7 +411,7 @@ class Search extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       type: "text",
       name: "idSearch",
       id: "search_top",
-      class: "form-control",
+      className: "form-control",
       placeholder: "Enter Spotify Artist URL or ID",
       onChange: this.handleInputChange,
       __source: {
@@ -351,7 +420,7 @@ class Search extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __self: this
     }), __jsx("span", {
-      class: "input-group-btn",
+      className: "input-group-btn",
       style: {
         marginLeft: "10px"
       },
@@ -362,7 +431,7 @@ class Search extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this
     }, __jsx("button", {
       type: "submit",
-      class: "btn btn-warning",
+      className: "btn btn-warning",
       onClick: event => window.location.href = `/artist/${this.grabID(idSearch)}`,
       __source: {
         fileName: _jsxFileName,
@@ -378,27 +447,6 @@ class Search extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
-/***/ "./lib/fetcher.js":
-/*!************************!*\
-  !*** ./lib/fetcher.js ***!
-  \************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_0__);
-
-
-function fetcher(...args) {
-  return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_0___default()(...args).then(response => response.json());
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (fetcher);
-
-/***/ }),
-
 /***/ "./pages/artist/[id].js":
 /*!******************************!*\
   !*** ./pages/artist/[id].js ***!
@@ -410,22 +458,16 @@ function fetcher(...args) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var swr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swr */ "swr");
-/* harmony import */ var swr__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(swr__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _lib_fetcher__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../lib/fetcher */ "./lib/fetcher.js");
-/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/header */ "./components/header.js");
-/* harmony import */ var _components_genres__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/genres */ "./components/genres.js");
-/* harmony import */ var _components_cities__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/cities */ "./components/cities.js");
-/* harmony import */ var _components_search__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/search */ "./components/search.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! axios */ "axios");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/header */ "./components/header.js");
+/* harmony import */ var _components_genres__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/genres */ "./components/genres.js");
+/* harmony import */ var _components_cities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/cities */ "./components/cities.js");
+/* harmony import */ var _components_search__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/search */ "./components/search.js");
+/* harmony import */ var _components_formats__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/formats */ "./components/formats.js");
 var _jsxFileName = "C:\\Users\\luke\\Development\\nextjs1\\pages\\artist\\[id].js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
 
 
 
@@ -443,152 +485,258 @@ function Artist(props) {
   let styles = {
     backgroundColor: "#cccccc"
   };
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
-    style: styles,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }, __jsx(_components_header__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    header: {
-      title: props.data.name
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }), __jsx("div", {
-    style: {
-      textAlign: "center"
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, __jsx("img", {
-    src: props.data.images[2].url,
-    alt: props.data.name,
-    style: {
-      textAlign: "center",
-      float: "middle"
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  })), __jsx("h1", {
-    style: headingStyle,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }, "Spotify Genres"), __jsx(_components_genres__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    genres: {
-      list: props.data.genres
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }), __jsx("h1", {
-    style: headingStyle,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }, "Monthly Listener Info "), __jsx(_components_cities__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    cities: {
-      list: props.data.insights.cities
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
-  }), __jsx("h1", {
-    style: headingStyle,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: this
-  }, "Popularity Rating: ", props.data.popularity), __jsx("h1", {
-    style: headingStyle,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: this
-  }, "Global Chart Position: ", props.data.insights.global_chart_position), __jsx("h1", {
-    style: headingStyle,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42
-    },
-    __self: this
-  }, "Monthly Listeners: ", props.data.insights.monthly_listeners), __jsx("h1", {
-    style: headingStyle,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45
-    },
-    __self: this
-  }, "Follower Count: ", props.data.insights.follower_count), __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 48
-    },
-    __self: this
-  }), __jsx("h1", {
-    style: headingStyle,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 49
-    },
-    __self: this
-  }, "Make Another Search"), __jsx(_components_search__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 50
-    },
-    __self: this
-  }), __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 51
-    },
-    __self: this
-  }), __jsx("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: this
-  })));
+
+  if (props.test !== "undefined") {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
+      style: styles,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
+      },
+      __self: this
+    }, __jsx(_components_header__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      header: {
+        title: props.data.name
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24
+      },
+      __self: this
+    }), __jsx("div", {
+      style: {
+        textAlign: "center"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25
+      },
+      __self: this
+    }, __jsx("img", {
+      src: props.data.images[2].url,
+      alt: props.data.name,
+      style: {
+        textAlign: "center",
+        float: "middle"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
+    })), __jsx("h1", {
+      style: headingStyle,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32
+      },
+      __self: this
+    }, "Spotify Genres"), __jsx(_components_genres__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      genres: {
+        list: props.data.genres
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: this
+    }), __jsx("h1", {
+      style: headingStyle,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: this
+    }, "Monthly Listener Info "), __jsx(_components_cities__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      cities: {
+        list: props.data.insights.cities
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    }), __jsx("h1", {
+      style: headingStyle,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36
+      },
+      __self: this
+    }, "Popularity Rating: ", props.data.popularity), __jsx("h1", {
+      style: headingStyle,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39
+      },
+      __self: this
+    }, "Global Chart Position: ", props.data.insights.global_chart_position), __jsx("h1", {
+      style: headingStyle,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    }, "Monthly Listeners: ", props.data.insights.monthly_listeners), __jsx("h1", {
+      style: headingStyle,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45
+      },
+      __self: this
+    }, "Follower Count: ", props.data.insights.follower_count), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      },
+      __self: this
+    }), __jsx("h1", {
+      style: headingStyle,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 49
+      },
+      __self: this
+    }, "Make Another Search"), __jsx(_components_search__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52
+      },
+      __self: this
+    })));
+  } else {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
+      style: styles,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 59
+      },
+      __self: this
+    }, __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 60
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 61
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 62
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 63
+      },
+      __self: this
+    }), __jsx("h1", {
+      style: {
+        textAlign: "center",
+        fontSize: "30px"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 64
+      },
+      __self: this
+    }, "There was an error with your search. Please make another one."), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 67
+      },
+      __self: this
+    }), __jsx(_components_formats__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 68
+      },
+      __self: this
+    }), __jsx(_components_search__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 69
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 70
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 71
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 72
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 73
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 74
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 75
+      },
+      __self: this
+    })));
+  }
 }
 
 Artist.getInitialProps = async function (context) {
-  const {
-    data
-  } = await axios__WEBPACK_IMPORTED_MODULE_8___default.a.get(`http://localhost:3000/api/${context.query.id}`);
-  console.log(`got props`);
-  return {
-    data
-  };
+  if (context.query.id !== "undefined") {
+    const {
+      data
+    } = await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(`http://localhost:3000/api/${context.query.id}`);
+    console.log(`got props`);
+    return {
+      data
+    };
+  } else {
+    return {
+      test: "undefined"
+    };
+  }
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Artist);
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!************************************!*\
   !*** multi ./pages/artist/[id].js ***!
   \************************************/
@@ -611,28 +759,6 @@ module.exports = require("axios");
 
 /***/ }),
 
-/***/ "isomorphic-unfetch":
-/*!*************************************!*\
-  !*** external "isomorphic-unfetch" ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("isomorphic-unfetch");
-
-/***/ }),
-
-/***/ "next/router":
-/*!******************************!*\
-  !*** external "next/router" ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("next/router");
-
-/***/ }),
-
 /***/ "react":
 /*!************************!*\
   !*** external "react" ***!
@@ -641,17 +767,6 @@ module.exports = require("next/router");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
-
-/***/ }),
-
-/***/ "swr":
-/*!**********************!*\
-  !*** external "swr" ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("swr");
 
 /***/ })
 

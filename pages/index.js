@@ -11,7 +11,7 @@ export default function Index() {
     <>
       <div style={styles}>
         <div className="container">
-          <Header header={{ title: "Spotify Artist Info Tool" }} />
+          <Header header={{ title: "Spotify Artist Info" }} />
           <br></br>
           <Header2 />
           <Search />

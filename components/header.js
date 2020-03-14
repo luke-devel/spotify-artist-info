@@ -11,9 +11,9 @@ function Header({ header }) {
     fontSize: "30px"
   };
   return (
-    <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <h3 class="course-heading" style={stylesCourseHeading}>
+    <div className="row">
+      <div className="col-md-6 offset-md-3">
+        <h3 className="course-heading" style={stylesCourseHeading}>
           {header.title}
         </h3>
       </div>

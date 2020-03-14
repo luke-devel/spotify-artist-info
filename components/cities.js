@@ -1,10 +1,8 @@
 function Cities({ cities }) {
-  let count = 0;
-  const citiesList = cities.list.map(function({ city, country, listeners }) {
-    count++;
+  const citiesList = cities.list.map(function({ city, country, listeners }, i) {
     return (
-      <p>
-        {count}: {city}, {country} - Monthly Listeners: {listeners}
+      <p key={i}>
+        {i + 1}: {city}, {country} - Monthly Listeners: {listeners}
       </p>
     );
   });

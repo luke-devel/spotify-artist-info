@@ -1,10 +1,11 @@
 import React from "react";
+import Formats from "../components/formats";
 
 function Header2() {
   return (
-    <div class="row">
+    <div className="row">
       <div
-        class="col-md-6 offset-md-3"
+        className="col-md-6 offset-md-3"
         style={{
           textAlign: "center",
           color: "black"
@@ -14,19 +15,7 @@ function Header2() {
           Enter a Spotify Artist URL or ID to Begin
         </h2>
         <br></br>
-        <h2 style={{ fontSize: "25px", textDecoration: "underline" }}>
-          Acceptable Formats
-        </h2>
-
-        <p style={{ fontSize: "20px" }}>
-          https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2?si=Ie1FaVNxSdSwK-qzGo_9wA
-        </p>
-
-        <p style={{ fontSize: "20px" }}>
-          open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2?si=Ie1FaVNxSdSwK-qzGo_9wA
-        </p>
-
-        <p style={{ fontSize: "20px" }}>3WrFJ7ztbogyGnTHbHJFl2</p>
+        <Formats />
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ class Search extends Component {
 
   grabID = artistLink => {
     if (!artistLink) {
-      return "3WrFJ7ztbogyGnTHbHJFl2";
+      return "undefined";
     }
     if (artistLink[0] === "h" && artistLink.length === 80) {
       return artistLink.slice(32, -26);
@@ -41,23 +41,23 @@ class Search extends Component {
   render() {
     const { idSearch } = this.state;
     return (
-      <div class="row">
-        <div class="col-md-6 offset-md-3">
+      <div className="row">
+        <div className="col-md-6 offset-md-3">
           <h2 style={{ fontSize: "23px" }}>Search Input: {idSearch}</h2>
           <br></br>
-          <div class="input-group">
+          <div className="input-group">
             <input
               type="text"
               name="idSearch"
               id="search_top"
-              class="form-control"
+              className="form-control"
               placeholder="Enter Spotify Artist URL or ID"
               onChange={this.handleInputChange}
             />
-            <span class="input-group-btn" style={{ marginLeft: "10px" }}>
+            <span className="input-group-btn" style={{ marginLeft: "10px" }}>
               <button
                 type="submit"
-                class="btn btn-warning"
+                className="btn btn-warning"
                 onClick={event =>
                   (window.location.href = `/artist/${this.grabID(idSearch)}`)
                 }
