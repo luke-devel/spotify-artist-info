@@ -26,9 +26,18 @@ class Search extends Component {
     if (artistLink[0] === "h" && artistLink.length === 80) {
       return artistLink.slice(32, -26);
     }
+    if (artistLink[0] === "s" && artistLink.length === 37) {
+      return artistLink.slice(15);
+    }
 
     if (artistLink[0] === "o" && artistLink.length === 72) {
       return artistLink.slice(24, -26);
+    }
+    if (artistLink[0] === "h" && artistLink.length === 54) {
+      return artistLink.slice(32);
+    }
+    if (artistLink[0] === "o" && artistLink.length === 46) {
+      return artistLink.slice(24);
     }
 
     if (artistLink.length === 22) {
@@ -51,7 +60,7 @@ class Search extends Component {
               name="idSearch"
               id="search_top"
               className="form-control"
-              placeholder="Enter Spotify Artist URL or ID"
+              placeholder="Enter Spotify Artist URL, ID, or URL"
               onChange={this.handleInputChange}
             />
             <span className="input-group-btn" style={{ marginLeft: "10px" }}>

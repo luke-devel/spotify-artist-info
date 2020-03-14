@@ -109,7 +109,34 @@ function Formats() {
       lineNumber: 13
     },
     __self: this
-  }, "3WrFJ7ztbogyGnTHbHJFl2"));
+  }, "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"), __jsx("p", {
+    style: {
+      fontSize: "20px"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, "open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"), __jsx("p", {
+    style: {
+      fontSize: "20px"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }, "3WrFJ7ztbogyGnTHbHJFl2"), __jsx("p", {
+    style: {
+      fontSize: "20px"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Formats);
@@ -275,8 +302,20 @@ var Search = /*#__PURE__*/function (_Component) {
         return artistLink.slice(32, -26);
       }
 
+      if (artistLink[0] === "s" && artistLink.length === 37) {
+        return artistLink.slice(15);
+      }
+
       if (artistLink[0] === "o" && artistLink.length === 72) {
         return artistLink.slice(24, -26);
+      }
+
+      if (artistLink[0] === "h" && artistLink.length === 54) {
+        return artistLink.slice(32);
+      }
+
+      if (artistLink[0] === "o" && artistLink.length === 46) {
+        return artistLink.slice(24);
       }
 
       if (artistLink.length === 22) {
@@ -301,14 +340,14 @@ var Search = /*#__PURE__*/function (_Component) {
         className: "row",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 53
         },
         __self: this
       }, __jsx("div", {
         className: "col-md-6 offset-md-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 54
         },
         __self: this
       }, __jsx("h2", {
@@ -317,20 +356,20 @@ var Search = /*#__PURE__*/function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 55
         },
         __self: this
       }, "Search Input: ", idSearch), __jsx("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 56
         },
         __self: this
       }), __jsx("div", {
         className: "input-group",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 57
         },
         __self: this
       }, __jsx("input", {
@@ -338,11 +377,11 @@ var Search = /*#__PURE__*/function (_Component) {
         name: "idSearch",
         id: "search_top",
         className: "form-control",
-        placeholder: "Enter Spotify Artist URL or ID",
+        placeholder: "Enter Spotify Artist URL, ID, or URL",
         onChange: this.handleInputChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 58
         },
         __self: this
       }), __jsx("span", {
@@ -352,7 +391,7 @@ var Search = /*#__PURE__*/function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 66
         },
         __self: this
       }, __jsx("button", {
@@ -363,7 +402,7 @@ var Search = /*#__PURE__*/function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 67
         },
         __self: this
       }, "Search!")))));
@@ -3454,11 +3493,12 @@ function Artist(props) {
       },
       __self: this
     }, __jsx("img", {
-      src: props.data.images[2].url,
+      src: props.data.images[1].url,
       alt: props.data.name,
       style: {
         textAlign: "center",
-        "float": "middle"
+        "float": "middle",
+        border: "10px solid black"
       },
       __source: {
         fileName: _jsxFileName,
@@ -3469,7 +3509,7 @@ function Artist(props) {
       style: headingStyle,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 36
       },
       __self: this
     }, "Spotify Genres"), __jsx(_components_genres__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -3478,14 +3518,14 @@ function Artist(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 37
       },
       __self: this
     }), __jsx("h1", {
       style: headingStyle,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 38
       },
       __self: this
     }, "Monthly Listener Info "), __jsx(_components_cities__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -3494,66 +3534,66 @@ function Artist(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35
+        lineNumber: 39
       },
       __self: this
     }), __jsx("h1", {
       style: headingStyle,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36
+        lineNumber: 40
       },
       __self: this
     }, "Popularity Rating: ", props.data.popularity), __jsx("h1", {
       style: headingStyle,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 43
       },
       __self: this
     }, "Global Chart Position: ", props.data.insights.global_chart_position), __jsx("h1", {
       style: headingStyle,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 46
       },
       __self: this
     }, "Monthly Listeners: ", props.data.insights.monthly_listeners), __jsx("h1", {
       style: headingStyle,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 49
       },
       __self: this
     }, "Follower Count: ", props.data.insights.follower_count), __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 52
       },
       __self: this
     }), __jsx("h1", {
       style: headingStyle,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 53
       },
       __self: this
     }, "Make Another Search"), __jsx(_components_search__WEBPACK_IMPORTED_MODULE_6__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 54
       },
       __self: this
     }), __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 55
       },
       __self: this
     }), __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 56
       },
       __self: this
     })));
@@ -3562,31 +3602,31 @@ function Artist(props) {
       style: styles,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 63
       },
       __self: this
     }, __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 64
       },
       __self: this
     }), __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 65
       },
       __self: this
     }), __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 66
       },
       __self: this
     }), __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 67
       },
       __self: this
     }), __jsx("h1", {
@@ -3596,46 +3636,22 @@ function Artist(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64
+        lineNumber: 68
       },
       __self: this
     }, "There was an error with your search. Please make another one."), __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67
+        lineNumber: 71
       },
       __self: this
     }), __jsx(_components_formats__WEBPACK_IMPORTED_MODULE_7__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68
-      },
-      __self: this
-    }), __jsx(_components_search__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 69
-      },
-      __self: this
-    }), __jsx("br", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 70
-      },
-      __self: this
-    }), __jsx("br", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 71
-      },
-      __self: this
-    }), __jsx("br", {
-      __source: {
-        fileName: _jsxFileName,
         lineNumber: 72
       },
       __self: this
-    }), __jsx("br", {
+    }), __jsx(_components_search__WEBPACK_IMPORTED_MODULE_6__["default"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 73
@@ -3651,6 +3667,30 @@ function Artist(props) {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 75
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 76
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 77
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 78
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 79
       },
       __self: this
     })));
@@ -3697,7 +3737,7 @@ Artist.getInitialProps = function _callee(context) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fartist%2F%5Bid%5D&absolutePagePath=C%3A%5CUsers%5Cluke%5CDevelopment%5Cnextjs1%5Cpages%5Cartist%5C%5Bid%5D.js ***!
   \************************************************************************************************************************************************************/
@@ -3720,5 +3760,5 @@ module.exports = dll_aa461a50664441bad342;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[id].js.map

@@ -24,9 +24,13 @@ function Artist(props) {
           <Header header={{ title: props.data.name }} />
           <div style={{ textAlign: "center" }}>
             <img
-              src={props.data.images[2].url}
+              src={props.data.images[1].url}
               alt={props.data.name}
-              style={{ textAlign: "center", float: "middle" }}
+              style={{
+                textAlign: "center",
+                float: "middle",
+                border: "10px solid black"
+              }}
             />
           </div>
           <h1 style={headingStyle}>Spotify Genres</h1>
