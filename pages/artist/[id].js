@@ -4,6 +4,7 @@ import fetcher from "../../lib/fetcher";
 import Header from "../../components/header";
 import Genres from "../../components/genres";
 import Cities from "../../components/cities";
+import Search from "../../components/search";
 
 import Axios from "axios";
 
@@ -44,6 +45,9 @@ function Artist(props) {
         <h1 style={headingStyle}>
           Follower Count: {props.data.insights.follower_count}
         </h1>
+        <br></br>
+        <h1 style={headingStyle}>Make Another Search</h1>
+        <Search />
         <br></br>
         <br></br>
       </div>

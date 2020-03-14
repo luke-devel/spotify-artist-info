@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -241,6 +241,143 @@ function Header({
 
 /***/ }),
 
+/***/ "./components/search.js":
+/*!******************************!*\
+  !*** ./components/search.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\luke\\Development\\nextjs1\\components\\search.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+class Search extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+
+    _defineProperty(this, "handleSubmit", event => {
+      event.preventDefault();
+    });
+
+    _defineProperty(this, "handleInputChange", event => {
+      event.preventDefault();
+      this.setState({
+        idSearch: event.target.value
+      });
+    });
+
+    _defineProperty(this, "grabID", artistLink => {
+      if (!artistLink) {
+        return "3WrFJ7ztbogyGnTHbHJFl2";
+      }
+
+      if (artistLink[0] === "h" && artistLink.length === 80) {
+        return artistLink.slice(32, -26);
+      }
+
+      if (artistLink[0] === "o" && artistLink.length === 72) {
+        return artistLink.slice(24, -26);
+      }
+
+      if (artistLink.length === 22) {
+        return artistLink;
+      } //  https://open.spotify.com/artist/5Z3IWpvwOvoaWodujHw7xh?si=VzZo4ckGSQi0Mj1Oa1EBJw
+
+    });
+
+    this.state = {
+      idSearch: null
+    };
+  }
+
+  render() {
+    const {
+      idSearch
+    } = this.state;
+    return __jsx("div", {
+      class: "row",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44
+      },
+      __self: this
+    }, __jsx("div", {
+      class: "col-md-6 offset-md-3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45
+      },
+      __self: this
+    }, __jsx("h2", {
+      style: {
+        fontSize: "23px"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46
+      },
+      __self: this
+    }, "Search Input: ", idSearch), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47
+      },
+      __self: this
+    }), __jsx("div", {
+      class: "input-group",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      },
+      __self: this
+    }, __jsx("input", {
+      type: "text",
+      name: "idSearch",
+      id: "search_top",
+      class: "form-control",
+      placeholder: "Enter Spotify Artist URL or ID",
+      onChange: this.handleInputChange,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 49
+      },
+      __self: this
+    }), __jsx("span", {
+      class: "input-group-btn",
+      style: {
+        marginLeft: "10px"
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57
+      },
+      __self: this
+    }, __jsx("button", {
+      type: "submit",
+      class: "btn btn-warning",
+      onClick: event => window.location.href = `/artist/${this.grabID(idSearch)}`,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 58
+      },
+      __self: this
+    }, "Search!")))));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Search);
+
+/***/ }),
+
 /***/ "./lib/fetcher.js":
 /*!************************!*\
   !*** ./lib/fetcher.js ***!
@@ -281,11 +418,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/header */ "./components/header.js");
 /* harmony import */ var _components_genres__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/genres */ "./components/genres.js");
 /* harmony import */ var _components_cities__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/cities */ "./components/cities.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! axios */ "axios");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_search__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/search */ "./components/search.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_8__);
 var _jsxFileName = "C:\\Users\\luke\\Development\\nextjs1\\pages\\artist\\[id].js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -308,7 +447,7 @@ function Artist(props) {
     style: styles,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 25
     },
     __self: this
   }, __jsx(_components_header__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -317,7 +456,7 @@ function Artist(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 26
     },
     __self: this
   }), __jsx("div", {
@@ -326,7 +465,7 @@ function Artist(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 27
     },
     __self: this
   }, __jsx("img", {
@@ -338,14 +477,14 @@ function Artist(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 28
     },
     __self: this
   })), __jsx("h1", {
     style: headingStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 34
     },
     __self: this
   }, "Spotify Genres"), __jsx(_components_genres__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -354,14 +493,14 @@ function Artist(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 35
     },
     __self: this
   }), __jsx("h1", {
     style: headingStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 36
     },
     __self: this
   }, "Monthly Listener Info "), __jsx(_components_cities__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -370,47 +509,66 @@ function Artist(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 37
     },
     __self: this
   }), __jsx("h1", {
     style: headingStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 38
     },
     __self: this
   }, "Popularity Rating: ", props.data.popularity), __jsx("h1", {
     style: headingStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 39
     },
     __self: this
   }, "Global Chart Position: ", props.data.insights.global_chart_position), __jsx("h1", {
     style: headingStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 42
     },
     __self: this
   }, "Monthly Listeners: ", props.data.insights.monthly_listeners), __jsx("h1", {
     style: headingStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 45
     },
     __self: this
   }, "Follower Count: ", props.data.insights.follower_count), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 48
+    },
+    __self: this
+  }), __jsx("h1", {
+    style: headingStyle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
+    },
+    __self: this
+  }, "Make Another Search"), __jsx(_components_search__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
     },
     __self: this
   }), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 51
+    },
+    __self: this
+  }), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
     },
     __self: this
   })));
@@ -419,7 +577,7 @@ function Artist(props) {
 Artist.getInitialProps = async function (context) {
   const {
     data
-  } = await axios__WEBPACK_IMPORTED_MODULE_7___default.a.get(`http://localhost:3000/api/${context.query.id}`);
+  } = await axios__WEBPACK_IMPORTED_MODULE_8___default.a.get(`http://localhost:3000/api/${context.query.id}`);
   console.log(`got props`);
   return {
     data
@@ -430,7 +588,7 @@ Artist.getInitialProps = async function (context) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!************************************!*\
   !*** multi ./pages/artist/[id].js ***!
   \************************************/

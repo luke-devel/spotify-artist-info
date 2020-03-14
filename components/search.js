@@ -20,6 +20,9 @@ class Search extends Component {
   };
 
   grabID = artistLink => {
+    if (!artistLink) {
+      return "3WrFJ7ztbogyGnTHbHJFl2";
+    }
     if (artistLink[0] === "h" && artistLink.length === 80) {
       return artistLink.slice(32, -26);
     }
@@ -31,6 +34,7 @@ class Search extends Component {
     if (artistLink.length === 22) {
       return artistLink;
     }
+
     //  https://open.spotify.com/artist/5Z3IWpvwOvoaWodujHw7xh?si=VzZo4ckGSQi0Mj1Oa1EBJw
   };
 
@@ -47,7 +51,7 @@ class Search extends Component {
               name="idSearch"
               id="search_top"
               class="form-control"
-              placeholder="Enter Spotify Artist ID"
+              placeholder="Enter Spotify Artist URL or ID"
               onChange={this.handleInputChange}
             />
             <span class="input-group-btn" style={{ marginLeft: "10px" }}>

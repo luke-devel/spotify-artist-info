@@ -13,8 +13,8 @@ function Header2() {
         <h2 style={{ fontSize: "25px" }}>
           Enter a Spotify Artist URL or ID to Begin
         </h2>
-
-        <h2 style={{ fontSize: "20px", textDecoration: "underline" }}>
+        <br></br>
+        <h2 style={{ fontSize: "25px", textDecoration: "underline" }}>
           Acceptable Formats
         </h2>
 

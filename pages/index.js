@@ -14,7 +14,6 @@ export default function Index() {
           <Header header={{ title: "Spotify Artist Info Tool" }} />
           <br></br>
           <Header2 />
-          <br></br>
           <Search />
           <br></br>
         </div>
